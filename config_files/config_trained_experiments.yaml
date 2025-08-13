@@ -1,0 +1,54 @@
+###########
+# General #
+###########
+project_name: "trained_experiments" # baseline for synthetic experiments
+experiment_name: 'training_n=1000_xavier_init_downsample_fac=4'
+verbose_level: 0 
+calc_H_O_info : True
+calc_hess_info: False 
+calc_H: False
+log_yaml_file: True
+device: 'cpu'
+
+#########
+# Data #
+#########
+
+dataset: 'cifar-10'
+dataset_path: 'data/bimodal_gaussian/bimodal_gaussian_d=50_k=1_n=2000_whitened.npy'
+downsample_factor: 4
+datapoints: 1000
+whiten: True
+# Cifar-10 dataset
+grayscale: False
+flatten: True
+
+#########
+# Model #
+#########
+# possible models: sequential, lin_residual_network, sequential_w_fully_skip
+path: 'trained_models_linearNet/'
+m: 500
+L: [2]
+inits: 3
+lr: [0.2]
+BS: 256
+sparsity: False
+
+model_name: 'sequential'
+epoch_max: 5000
+every_epoch: 100
+
+############
+# Analysis #
+############
+# method to calculate the condition number of the Hessian and outer product Hessian
+method_cond_num: 'naive'
+
+############# 
+# Optimizer #
+############# 
+loss_func: 'mse' #mse, crossentropy
+max_iter: 100
+calc_every_iter: 10
+
