@@ -16,4 +16,3 @@ There are three types of experiments conducted in this work:
 	
 	In all cases, a pandas Dataframes is created and saved in the folder "pandas_dataframes". They are then used in the jupyter notebook make_seaborn_plots.ipynb
 	
-Regarding the datasets. You can find cifar-10 in a reformatted manner under the following link: https://file.io/al8yuFzAI4Xr
